@@ -1,0 +1,26 @@
+\contentsline {chapter}{\numberline {1}引入}{5}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}Makefile}{7}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}一个示例}{7}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}make是如何工作的}{8}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}makefile中使用变量}{9}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}让make自动推导}{10}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}清空目标文件的规则}{10}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Makefile的文件名}{11}{section.2.6}% 
+\contentsline {section}{\numberline {2.7}使用变量}{11}{section.2.7}% 
+\contentsline {subsection}{\numberline {2.7.1}一、变量的基础}{11}{subsection.2.7.1}% 
+\contentsline {subsection}{\numberline {2.7.2}变量赋值}{11}{subsection.2.7.2}% 
+\contentsline {subsection}{\numberline {2.7.3}自动化变量}{12}{subsection.2.7.3}% 
+\contentsline {chapter}{\numberline {3}linux.sh语法}{13}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}开头}{13}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}注释}{13}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}变量}{13}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}环境变量}{14}{section.3.4}% 
+\contentsline {section}{\numberline {3.5}Shell命令和流程控制}{14}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}1. Unix 命令:}{14}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}2. 概念: 管道, 重定向和 backtick}{15}{subsection.3.5.2}% 
+\contentsline {subsection}{\numberline {3.5.3}3. 流程控制}{15}{subsection.3.5.3}% 
+\contentsline {chapter}{\numberline {4}Methods}{17}{chapter.4}% 
+\contentsline {chapter}{\numberline {5}Applications}{19}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Example one}{19}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Example two}{19}{section.5.2}% 
+\contentsline {chapter}{\numberline {6}Final Words}{21}{chapter.6}% 

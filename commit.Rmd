@@ -1,0 +1,26 @@
+---
+output: github_document
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(fs)
+```
+
+我大致看了下，这个地方需要知道一下 bookdown 的产出是一个 HTML 结构，如果相关的 css 文档没有成功在 GitHub Pages 加载成功，那么就会 fail。
+
+你应该是是使用`rmarkdown::render_site()`完成的，这个方式有一个不好的是，对于初学者来说，必须要严格按照他的结构书写 gitbook，一旦出现配置问题，比较难 debug。
+
+你这里建立一个母文档，其他子文档，用过 `knitr::child` 的方式调用。
+这里有一个 demo，见 https://github.com/JiaxiangBU/nintendo_switch_mario
+
+```r
+bookdown-demo-master/_bookdown.yml bookdown-demo-master/_output.yml 
+```
+
+这两个文档先删除
+
+然后构建一个 Rmd，调用子文档
+这个模板可以参考`JiaxiangBU/add2gitbook`添加。
+
+你可以参考 `demo.html` 这个文档，把后面的 Rmd 补齐。

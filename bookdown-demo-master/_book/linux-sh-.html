@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 linux.sh语法 | A Minimal Book Example</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 linux.sh语法 | A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 linux.sh语法 | A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Yihui Xie" />
+
+
+<meta name="date" content="2020-04-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="methods.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 引入</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Makefile</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#一个示例"><i class="fa fa-check"></i><b>2.1</b> 一个示例</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#make是如何工作的"><i class="fa fa-check"></i><b>2.2</b> make是如何工作的</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#makefile中使用变量"><i class="fa fa-check"></i><b>2.3</b> makefile中使用变量</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#让make自动推导"><i class="fa fa-check"></i><b>2.4</b> 让make自动推导</a></li>
+<li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#清空目标文件的规则"><i class="fa fa-check"></i><b>2.5</b> 清空目标文件的规则</a></li>
+<li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#makefile的文件名"><i class="fa fa-check"></i><b>2.6</b> Makefile的文件名</a></li>
+<li class="chapter" data-level="2.7" data-path="intro.html"><a href="intro.html#使用变量"><i class="fa fa-check"></i><b>2.7</b> 使用变量</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="intro.html"><a href="intro.html#一变量的基础"><i class="fa fa-check"></i><b>2.7.1</b> 一、变量的基础</a></li>
+<li class="chapter" data-level="2.7.2" data-path="intro.html"><a href="intro.html#变量赋值"><i class="fa fa-check"></i><b>2.7.2</b> 变量赋值</a></li>
+<li class="chapter" data-level="2.7.3" data-path="intro.html"><a href="intro.html#自动化变量"><i class="fa fa-check"></i><b>2.7.3</b> 自动化变量</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="linux-sh-.html"><a href="linux-sh-.html"><i class="fa fa-check"></i><b>3</b> linux.sh语法</a><ul>
+<li class="chapter" data-level="3.1" data-path="linux-sh-.html"><a href="linux-sh-.html#开头"><i class="fa fa-check"></i><b>3.1</b> 开头</a></li>
+<li class="chapter" data-level="3.2" data-path="linux-sh-.html"><a href="linux-sh-.html#注释"><i class="fa fa-check"></i><b>3.2</b> 注释</a></li>
+<li class="chapter" data-level="3.3" data-path="linux-sh-.html"><a href="linux-sh-.html#变量"><i class="fa fa-check"></i><b>3.3</b> 变量</a></li>
+<li class="chapter" data-level="3.4" data-path="linux-sh-.html"><a href="linux-sh-.html#环境变量"><i class="fa fa-check"></i><b>3.4</b> 环境变量</a></li>
+<li class="chapter" data-level="3.5" data-path="linux-sh-.html"><a href="linux-sh-.html#shell命令和流程控制"><i class="fa fa-check"></i><b>3.5</b> Shell命令和流程控制</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="linux-sh-.html"><a href="linux-sh-.html#unix-命令"><i class="fa fa-check"></i><b>3.5.1</b> 1. Unix 命令:</a></li>
+<li class="chapter" data-level="3.5.2" data-path="linux-sh-.html"><a href="linux-sh-.html#概念-管道-重定向和-backtick"><i class="fa fa-check"></i><b>3.5.2</b> 2. 概念: 管道, 重定向和 backtick</a></li>
+<li class="chapter" data-level="3.5.3" data-path="linux-sh-.html"><a href="linux-sh-.html#流程控制"><i class="fa fa-check"></i><b>3.5.3</b> 3. 流程控制</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
+<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
+<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="linux.sh语法" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> linux.sh语法</h1>
+<div id="开头" class="section level2">
+<h2><span class="header-section-number">3.1</span> 开头</h2>
+<p>程序必须以下面的行开始（必须放在文件的第一行）：</p>
+<pre><code>#!/bin/sh</code></pre>
+<p>符号#!用来告诉系统它后面的参数是用来执行该文件的程序。在这个例子中我们使用/bin/sh来执行程序。
+当编写脚本完成时，如果要执行该脚本，还必须使其可执行。
+要使编写脚本可执行：
+编译 chmod +x filename 这样才能用./filename 来运行</p>
+</div>
+<div id="注释" class="section level2">
+<h2><span class="header-section-number">3.2</span> 注释</h2>
+<p>在进行shell编程时，以#开头的句子表示注释，直到这一行的结束。我们真诚地建议您在程序中使用注释。
+如果您使用了注释，那么即使相当长的时间内没有使用该脚本，您也能在很短的时间内明白该脚本的作用及工作原理。</p>
+</div>
+<div id="变量" class="section level2">
+<h2><span class="header-section-number">3.3</span> 变量</h2>
+<p>在其他编程语言中您必须使用变量。在shell编程中，所有的变量都由字符串组成，并且您不需要对变量进行声明。要赋值给一个变量，您可以这样写：</p>
+<pre><code>#!/bin/sh
+ #对变量赋值：
+ a=”hello world”
+# 现在打印变量a的内容：
+ echo “A is:”
+ echo $a</code></pre>
+<p>有时候变量名很容易与其他文字混淆，比如：</p>
+<pre><code> num=2
+ echo “this is the $numnd”</code></pre>
+<p>这并不会打印出”this is the 2nd”，而仅仅打印”this is the “，因为shell会去搜索变量numnd的值，但是这个变量时没有值的。可以使用花括号来告诉shell我们要打印的是num变量：</p>
+<pre><code> num=2
+ echo “this is the ${num}nd”</code></pre>
+<p>这将打印： this is the 2nd</p>
+</div>
+<div id="环境变量" class="section level2">
+<h2><span class="header-section-number">3.4</span> 环境变量</h2>
+<p>由export关键字处理过的变量叫做环境变量。我们不对环境变量进行讨论，因为通常情况下仅仅在登录脚本中使用环境变量。</p>
+</div>
+<div id="shell命令和流程控制" class="section level2">
+<h2><span class="header-section-number">3.5</span> Shell命令和流程控制</h2>
+<p>在shell脚本中可以使用三类命令：</p>
+<div id="unix-命令" class="section level3">
+<h3><span class="header-section-number">3.5.1</span> 1. Unix 命令:</h3>
+<p>虽然在shell脚本中可以使用任意的unix命令，但是还是由一些相对更常用的命令。这些命令通常是用来进行文件和文字操作的。
+常用命令语法及功能:</p>
+<ul>
+<li>echo “some text”: 将文字内容打印在屏幕上</li>
+<li>ls: 文件列表</li>
+<li>wc –l file wc -w file wc -c file: 计算文件行数；计算文件中的单词数；计算文件中的字符数</li>
+<li>cp sourcefile destfile: 文件拷贝</li>
+<li>mv oldname newname : 重命名文件或移动文件</li>
+<li>rm file: 删除文件</li>
+<li>grep ‘pattern’ file: 在文件内搜索字符串比如：grep ’searchstring’ file.txt</li>
+<li>cut -b colnum file: 指定欲显示的文件内容范围，并将它们输出到标准输出设备比如：输出每行第5个到第9个字符cut -b5-9 file.txt千万不要和cat命令混淆，
+这是两个完全不同的命令</li>
+<li>cat file.txt: 输出文件内容到标准输出设备（屏幕）上</li>
+<li>file somefile: 得到文件类型</li>
+<li>read var: 提示用户输入，并将输入赋值给变量</li>
+<li>sort file.txt: 对file.txt文件中的行进行排序</li>
+<li>uniq: 删除文本文件中出现的重复行，比如： sort file.txt | uniq</li>
+<li>expr: 进行数学运算Example: add 2 and 3 为 expr 2 “+” 3</li>
+<li>find: 搜索文件比如：根据文件名搜索find . -name filename -print</li>
+<li>tee: 将数据输出到标准输出设备(屏幕) 和文件比如：somecommand | tee outfile</li>
+<li>basename file: 返回不包含路径的文件名比如： basename /bin/tux将返回 tux</li>
+<li>dirname file: 返回文件所在路径比如：dirname /bin/tux将返回 /bin</li>
+<li>head file: 打印文本文件开头几行</li>
+<li>tail file : 打印文本文件末尾几行</li>
+<li>sed: Sed是一个基本的查找替换程序。可以从标准输入（比如命令管道）读入文本，并将
+结果输出到标准输出（屏幕）。该命令采用正则表达式（见参考）进行搜索。不要和shell中的通配符相混淆。比如：将linuxfocus替换为 LinuxFocus ：</li>
+</ul>
+<pre><code>cat text.file | sed ’s/linuxfocus/LinuxFocus/’ &gt;newtext.file</code></pre>
+<ul>
+<li>awk: awk 用来从文本文件中提取字段。缺省地，字段分割符是空格，可以使用-F指定其他分割符。</li>
+</ul>
+<pre><code>cat  file.txt | awk -F, ‘{print \$1 “,” \$3}’</code></pre>
+<p>这里我们使用，作为字段分割符，同时打印第一个和第三个字段。如果该文件内容如下： Adam Bor, 34, IndiaKerryMiller, 22, USA命令输出结果为：Adam Bor, IndiaKerry Miller, USA</p>
+</div>
+<div id="概念-管道-重定向和-backtick" class="section level3">
+<h3><span class="header-section-number">3.5.2</span> 2. 概念: 管道, 重定向和 backtick</h3>
+<p>这些不是系统命令，但是他们真的很重要。
+管道 (|) 将一个命令的输出作为另外一个命令的输入。
+grep “hello” file.txt | wc -l
+在file.txt中搜索包含有”hello”的行并计算其行数。
+在这里grep命令的输出作为wc命令的输入。当然您可以使用多个命令。
+重定向：将命令的结果输出到文件，而不是标准输出（屏幕）。
+&gt; 写入文件并覆盖旧文件
+&gt;&gt; 追加到文件的尾部，保留旧文件内容。
+反短斜线
+使用反短斜线可以将一个命令的输出作为另外一个命令的一个命令行参数。
+命令：
+<code>find . -mtime  -1  -type  f  -print</code>
+用来查找过去24小时（-mtime –2则表示过去48小时）内修改过的文件。如果您想将所有查找到的文件打一个包，则可以使用以下linux 脚本：
+<code>#!/bin/sh  # The ticks are backticks (`) not normal quotes (‘):  tar -zcvf  lastmod.tar.gz `find . -mtime -1 -type f -print`</code></p>
+</div>
+<div id="流程控制" class="section level3">
+<h3><span class="header-section-number">3.5.3</span> 3. 流程控制</h3>
+<p>1.if
+“if” 表达式 如果条件为真则执行then后面的部分：
+if ….; then
+….
+elif ….; then
+….
+else
+….
+fi
+大多数情况下，可以使用测试命令来对条件进行测试。比如可以比较字符串、判断文件是否存在及是否可读等等…
+通常用” [ ] “来表示条件测试。注意这里的空格很重要。要确保方括号的空格。
+[ -f &quot;somefile&quot; ] ：判断是否是一个文件
+[ -x &quot;/bin/ls&quot; ] ：判断/bin/ls是否存在并有可执行权限
+[ -n &quot;$var&quot; ] ：判断$var变量是否有值
+[ &quot;$a&quot; = &quot;$b&quot; ] ：判断$a和$b是否相等
+执行man test可以查看所有测试表达式可以比较和判断的类型。
+直接执行以下脚本：
+<code>\#!/bin/sh  if [ &quot;\$SHELL&quot; = &quot;/bin/bash&quot; ]; then  echo “your login shell is the bash (bourne again shell)”  else  echo “your login shell is not bash but $SHELL”  fi</code>
+这里有个例子：
+<code>#!/bin/sh  mailfolder=/var/spool/mail/james  [ -r &quot;$mailfolder&quot; ]‘ ‘{ echo “Can not read $mailfolder” ; exit 1; }  echo “$mailfolder has mail from:”  grep “^From ” $mailfolder</code>
+该脚本首先判断mailfolder是否可读。如果可读则打印该文件中的”From” 一行。如果不可读则或操作生效，打印错误信息后脚本退出。这里有个问题，那就是我们必须有两个命令：
+◆打印错误信息
+◆退出程序
+我们使用花括号以匿名函数的形式将两个命令放到一起作为一个命令使用。一般函数将在下文提及。
+不用与和或操作符，我们也可以用if表达式作任何事情，但是使用与或操作符会更便利很多。</p>
+<p>## 例子</p>
+<pre><code># # sac &amp; td3
+for exp in summon 
+do
+   # for version in pow-averse pow-seeking wang-averse wang-seeking neutral cpw-averse cpw-seeking cvar-averse cvar-seeking
+   # for version in cpw-seeking cvar-seeking # pow-seeking wang-seeking
+   for version in neutral cpw-averse cvar-averse pow-averse wang-averse
+   do
+       for seed in 2
+       do
+           mkdir -p &quot;logs/dsac-${exp}-${version}&quot;
+           python dsac_v2.py --config &quot;configs/highway/${exp}-${version}.yaml&quot; --gpu 2 --seed ${seed} &gt;&gt; &quot;logs/dsac-${exp}-${version}/dsac-${exp}-${version}--s-${seed}&quot;  2&gt;&amp;1 &amp;
+       done
+   done
+done</code></pre>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-literature.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
